@@ -1,0 +1,136 @@
+{
+  "Group Node": {
+    "prefix": "group",
+    "body": [
+      "Group {",
+      "\tUniqueID ${1:Group_0}",
+      "\tnodeMask ${2:0xffffffff}",
+      "\tcullingActive ${3:TRUE}",
+      "\tnum_children ${4:1}",
+      "\t${5:// children}",
+      "}"
+    ],
+    "description": "创建一个 Group 节点"
+  },
+  "Geode Node": {
+    "prefix": "geode",
+    "body": [
+      "Geode {",
+      "\tnodeMask ${1:0xffffffff}",
+      "\tcullingActive ${2:TRUE}",
+      "\tnum_drawables ${3:1}",
+      "\t${4:// drawables}",
+      "}"
+    ],
+    "description": "创建一个 Geode 节点"
+  },
+  "Geometry": {
+    "prefix": "geometry",
+    "body": [
+      "Geometry {",
+      "\tDataVariance ${1:STATIC}",
+      "\tuseDisplayList ${2:TRUE}",
+      "\tuseVertexBufferObjects ${3:FALSE}",
+      "\tPrimitiveSets ${4:1}",
+      "\t{",
+      "\t\t${5:// primitive sets}",
+      "\t}",
+      "\tVertexArray ${6:Vec3Array} ${7:// count} {",
+      "\t\t${8:// vertices}",
+      "\t}",
+      "}"
+    ],
+    "description": "创建一个 Geometry 对象"
+  },
+  "StateSet": {
+    "prefix": "stateset",
+    "body": [
+      "StateSet {",
+      "\tDataVariance ${1:STATIC}",
+      "\trendering_hint ${2:DEFAULT_BIN}",
+      "\trenderBinMode ${3:INHERIT}",
+      "\t${4:// state attributes}",
+      "}"
+    ],
+    "description": "创建一个 StateSet 对象"
+  },
+  "Material": {
+    "prefix": "material",
+    "body": [
+      "Material {",
+      "\tDataVariance ${1:STATIC}",
+      "\tColorMode ${2:OFF}",
+      "\tambientColor ${3:1 1 1 1}",
+      "\tdiffuseColor ${4:1 1 1 1}",
+      "\tspecularColor ${5:0 0 0 1}",
+      "\temissionColor ${6:0 0 0 1}",
+      "\tshininess ${7:0}",
+      "}"
+    ],
+    "description": "创建一个 Material 对象"
+  },
+  "Texture2D": {
+    "prefix": "texture2d",
+    "body": [
+      "Texture2D {",
+      "\tDataVariance ${1:STATIC}",
+      "\tfile \"${2:texture.jpg}\"",
+      "\twrap_s ${3:CLAMP}",
+      "\twrap_t ${4:CLAMP}",
+      "\twrap_r ${5:CLAMP}",
+      "\tmin_filter ${6:LINEAR}",
+      "\tmag_filter ${7:LINEAR}",
+      "\tmaxAnisotropy ${8:1}",
+      "\tborderColor ${9:0 0 0 0}",
+      "\tborderWidth ${10:0}",
+      "\tuseHardwareMipMapGeneration ${11:TRUE}",
+      "\tunRefImageDataAfterApply ${12:TRUE}",
+      "\tinternalFormatMode ${13:USE_IMAGE_DATA_FORMAT}",
+      "\tresizeNonPowerOfTwo ${14:TRUE}",
+      "\tshadowComparison ${15:FALSE}",
+      "}"
+    ],
+    "description": "创建一个 Texture2D 对象"
+  },
+  "Vec3Array": {
+    "prefix": "vec3array",
+    "body": ["Vec3Array ${1:// count} {", "\t${2:// x y z values}", "}"],
+    "description": "创建一个 Vec3Array 数组"
+  },
+  "DrawElementsUInt": {
+    "prefix": "drawelements",
+    "body": [
+      "DrawElementsUInt ${1:TRIANGLES} ${2:// count}",
+      "{",
+      "\t${3:// indices}",
+      "}"
+    ],
+    "description": "创建一个 DrawElementsUInt 图元集合"
+  },
+  "MatrixTransform": {
+    "prefix": "matrixtransform",
+    "body": [
+      "MatrixTransform {",
+      "\tUniqueID ${1:MatrixTransform_0}",
+      "\tDataVariance ${2:STATIC}",
+      "\tnodeMask ${3:0xffffffff}",
+      "\tcullingActive ${4:TRUE}",
+      "\treferenceFrame ${5:RELATIVE_RF}",
+      "\tMatrix {",
+      "\t\t${6:1 0 0 0}",
+      "\t\t${7:0 1 0 0}",
+      "\t\t${8:0 0 1 0}",
+      "\t\t${9:0 0 0 1}",
+      "\t}",
+      "\tnum_children ${10:1}",
+      "\t${11:// children}",
+      "}"
+    ],
+    "description": "创建一个 MatrixTransform 节点"
+  },
+  "Comment": {
+    "prefix": "comment",
+    "body": ["# ${1:comment}"],
+    "description": "添加注释"
+  }
+}

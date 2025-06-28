@@ -1,0 +1,89 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 故障排除指南
+
+这里记录了常见问题的解决方案。
+
+## 构建和打包问题
+
+### 打包时文件不存在
+如果运行 `npm run package` 时出现文件不存在的警告：
+
+检查 [scripts/package.js](mdc:scripts/package.js) 中的文件路径：
+- ✅ `resources/syntaxes/osg.tmLanguage.json`
+- ✅ `resources/snippets/osg.json`
+- ✅ `language-configuration.json`
+
+**已解决**：项目重构后路径已更新，应该不再出现此问题。
+
+### TypeScript 编译错误
+1. 检查 [tsconfig.json](mdc:tsconfig.json) 配置
+2. 确保依赖已安装：`npm install`
+3. 清理并重新编译：`npm run clean && npm run compile`
+
+### VSIX 包大小异常
+正常的 VSIX 包大小约为 9350 bytes。如果显著偏小，可能缺少重要文件。
+
+## 开发环境问题
+
+### 扩展激活失败
+1. 检查 [package.json](mdc:package.json) 中的 `activationEvents`
+2. 确认 `onLanguage:osg` 配置正确
+3. 查看 VS Code 开发者控制台的错误信息
+
+### 语法高亮不工作
+1. 确认 [resources/syntaxes/osg.tmLanguage.json](mdc:resources/syntaxes/osg.tmLanguage.json) 存在
+2. 检查 [package.json](mdc:package.json) 中的 `grammars` 路径配置
+3. 重新加载 VS Code 窗口
+
+### 代码片段不显示
+1. 确认 [resources/snippets/osg.json](mdc:resources/snippets/osg.json) 存在
+2. 检查 [package.json](mdc:package.json) 中的 `snippets` 路径配置
+3. 尝试输入完整的片段前缀（如 `group`）
+
+## 代码质量检查
+
+### ESLint 错误
+运行 `npm run lint` 检查代码规范：
+- 配置文件：[.eslintrc.json](mdc:.eslintrc.json)
+- 常见问题：命名规范、分号使用、括号匹配
+
+### 测试失败
+1. 确保测试文件在 `test/` 目录下
+2. 检查测试数据文件在 `test/fixtures/`
+3. 查看 [test/README.md](mdc:test/README.md) 了解测试要求
+
+## Git 和协作问题
+
+### 提交被拒绝
+1. 检查是否遵循提交信息格式（Conventional Commits）
+2. 确保通过 ESLint 检查：`npm run lint`
+3. 运行测试：`npm test`
+
+### CI/CD 失败
+检查 [.github/workflows/ci.yml](mdc:.github/workflows/ci.yml)：
+1. Node.js 版本兼容性
+2. 依赖安装问题
+3. 构建脚本执行
+
+## 文件路径问题
+
+### 重构后路径更新
+项目重构后的重要路径变更：
+- `syntaxes/` → `resources/syntaxes/`
+- `snippets/` → `resources/snippets/`
+- 构建输出：`dist/vscode-osg-0.1.0.vsix`
+
+如果遇到路径相关问题，检查以上路径是否正确。
+
+## 获得帮助
+
+1. 查看项目文档：[docs/](mdc:docs)
+2. 查看贡献指南：[CONTRIBUTING.md](mdc:CONTRIBUTING.md)
+3. 创建 GitHub Issue（使用相应模板）
+4. 检查现有的 Issue 和 PR
+
+**记住**：在寻求帮助时，请提供详细的错误信息、重现步骤和环境信息。

@@ -1,0 +1,151 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "OSG",
+  "scopeName": "source.osg",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#node-types"
+    },
+    {
+      "include": "#attributes"
+    },
+    {
+      "include": "#data-types"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#brackets"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.osg",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.osg",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.osg",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.osg",
+          "match": "\\b([0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)\\b"
+        },
+        {
+          "name": "constant.numeric.integer.osg",
+          "match": "\\b([0-9]+)\\b"
+        },
+        {
+          "name": "constant.numeric.hex.osg",
+          "match": "\\b(0x[0-9a-fA-F]+)\\b"
+        }
+      ]
+    },
+    "node-types": {
+      "patterns": [
+        {
+          "name": "entity.name.type.node.osg",
+          "match": "\\b(Group|Geode|Geometry|Transform|MatrixTransform|StateSet|Material|Light|LightSource|PagedLOD|LOD|Switch|Sequence|Billboard|ProxyNode|OccluderNode|ClearNode|ClipNode|Impostor|AnimationPath|AnimationPathCallback|ShapeDrawable|Sphere|Box|Cone|Cylinder|Quad|HeightField|CompositeShape|TriangleMesh|ConvexHull|Capsule|InfinitePlane|Drawable|Array|Vec3Array|Vec4Array|Vec2Array|FloatArray|IntArray|UByteArray|UShortArray|UIntArray|ByteArray|ShortArray|DrawArrays|DrawArrayLengths|DrawElementsUByte|DrawElementsUShort|DrawElementsUInt|PrimitiveSet|Program|Shader|Uniform|BufferObject|VertexBufferObject|ElementBufferObject|PixelBufferObject|Texture|Texture1D|Texture2D|Texture3D|TextureCubeMap|TextureRectangle|Image|BlendFunc|BlendEquation|AlphaFunc|DepthFunc|StencilFunc|CullFace|PolygonMode|PolygonOffset|LineWidth|Point|PointSprite|Fog|ClampColor|ColorMask|ColorMatrix|Light|LightModel|FrontFace|Depth|Stencil|Viewport|Scissor|ClipPlane|TexGen|TexEnv|TexEnvCombine|TexMat|Multisample|VertexProgram|FragmentProgram|VertexShader|FragmentShader|GeometryShader|TessControlShader|TessEvaluationShader|ComputeShader)\\b"
+        }
+      ]
+    },
+    "attributes": {
+      "patterns": [
+        {
+          "name": "entity.name.function.attribute.osg",
+          "match": "\\b(name|DataVariance|StateSet|Drawables|VertexArray|NormalArray|ColorArray|TexCoordArray|PrimitiveSetList|ModeList|UserDataContainer|nodeMask|cullingActive|description|num_children|num_drawables|UniqueID|Center|Radius|RangeMode|RangeList|DatabasePath|NumChildrenThatCannotBeExpired|DisableExternalChildrenPaging|FileNameList|rendering_hint|renderBinMode|ColorMode|ambientColor|diffuseColor|specularColor|emissionColor|shininess|textureUnit|file|wrap_s|wrap_t|wrap_r|min_filter|mag_filter|maxAnisotropy|borderColor|borderWidth|useHardwareMipMapGeneration|unRefImageDataAfterApply|internalFormatMode|resizeNonPowerOfTwo|shadowComparison|shadowCompareFunc|shadowTextureMode|useDisplayList|useVertexBufferObjects|PrimitiveSets|BoundingBox|BoundingSphere|Matrix|matrix|rotation|translation|scale|pivot|scalePivot|scaleOrientation|mode|equation|source|destination|reference|mask|func|range|constantAttenuation|linearAttenuation|quadraticAttenuation|spotDirection|spotExponent|spotCutoff|ambient|diffuse|specular|position|direction|localViewer|twoSided|colorControl|separateSpecularColor)\\b"
+        }
+      ]
+    },
+    "data-types": {
+      "patterns": [
+        {
+          "name": "support.type.data.osg",
+          "match": "\\b(Vec2|Vec3|Vec4|Matrix|Quat|BoundingBox|BoundingSphere|float|double|int|bool|GL_TEXTURE_2D|GL_TEXTURE_1D|GL_TEXTURE_3D|GL_TEXTURE_CUBE_MAP|GL_TRIANGLES|GL_TRIANGLE_STRIP|GL_TRIANGLE_FAN|GL_QUADS|GL_QUAD_STRIP|GL_POINTS|GL_LINES|GL_LINE_STRIP|GL_LINE_LOOP|GL_POLYGON|TRIANGLES|TRIANGLE_STRIP|TRIANGLE_FAN|QUADS|QUAD_STRIP|POINTS|LINES|LINE_STRIP|LINE_LOOP|POLYGON|CLAMP|CLAMP_TO_EDGE|CLAMP_TO_BORDER|REPEAT|MIRROR|LINEAR|NEAREST|LINEAR_MIPMAP_LINEAR|LINEAR_MIPMAP_NEAREST|NEAREST_MIPMAP_LINEAR|NEAREST_MIPMAP_NEAREST|GL_LEQUAL|GL_LUMINANCE)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.osg",
+          "match": "\\b(TRUE|FALSE)\\b"
+        },
+        {
+          "name": "constant.language.variance.osg",
+          "match": "\\b(STATIC|DYNAMIC)\\b"
+        },
+        {
+          "name": "constant.language.mode.osg",
+          "match": "\\b(ON|OFF|DEFAULT|INHERIT|OVERRIDE|PROTECTED|DEFAULT_BIN|OPAQUE_BIN|TRANSPARENT_BIN|USE_IMAGE_DATA_FORMAT|PIXEL_SIZE_ON_SCREEN|DISTANCE_FROM_EYE_POINT)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.osg",
+          "match": "="
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "name": "punctuation.section.block.begin.osg",
+          "match": "\\{"
+        },
+        {
+          "name": "punctuation.section.block.end.osg",
+          "match": "\\}"
+        },
+        {
+          "name": "punctuation.section.brackets.begin.osg",
+          "match": "\\["
+        },
+        {
+          "name": "punctuation.section.brackets.end.osg",
+          "match": "\\]"
+        },
+        {
+          "name": "punctuation.section.parens.begin.osg",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.section.parens.end.osg",
+          "match": "\\)"
+        }
+      ]
+    }
+  }
+}

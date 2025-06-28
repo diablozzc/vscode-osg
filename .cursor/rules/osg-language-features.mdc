@@ -1,0 +1,35 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# OSG 语言特性和配置
+
+这个 VS Code 扩展为 OSG (OpenSceneGraph) 文件格式提供语言支持。
+
+## 语言定义
+
+OSG 语言配置在 [package.json](mdc:package.json) 中定义：
+- 语言 ID: `osg`
+- 文件扩展名: `.osg`
+- 配置文件: [language-configuration.json](mdc:language-configuration.json)
+
+## 语法高亮
+
+语法定义: [resources/syntaxes/osg.tmLanguage.json](mdc:resources/syntaxes/osg.tmLanguage.json)
+
+支持的语法元素：
+- 节点类型: Group, Geode, Geometry, StateSet, Material
+- 属性关键字: name, DataVariance, nodeMask
+- 数据类型: Vec3, Vec4, Matrix, Quat
+- 常量: TRUE, FALSE, STATIC, DYNAMIC
+
+## 代码片段
+
+代码片段定义: [resources/snippets/osg.json](mdc:resources/snippets/osg.json)
+
+可用片段前缀: group, geode, geometry, stateset, material, texture2d
+
+## 示例文件
+
+参考 [examples/basic/](mdc:examples/basic/) 目录中的示例文件学习 OSG 语法。

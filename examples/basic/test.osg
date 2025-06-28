@@ -1,0 +1,60 @@
+Group {
+    UniqueID Group_0
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    num_children 1
+    // children
+
+    PagedLOD {
+        nodeMask 0xffffffff
+        cullingActive TRUE
+        Center 0 0 0
+        Radius 1000
+        RangeMode PIXEL_SIZE_ON_SCREEN
+        RangeList 2 {
+            0 100
+            100 1000
+        }
+        DatabasePath 
+        NumChildrenThatCannotBeExpired 0
+        DisableExternalChildrenPaging 0
+        FileNameList 1 {
+            "BlockBAAAXB_L11_1.osg"
+        }
+        num_children 1
+        Geode {
+            nodeMask 0xffffffff
+            cullingActive TRUE
+            description "REVTS1RPUC1QR0JHM0ozLg=="
+            num_drawables 1
+            Geometry {
+                DataVariance STATIC
+                StateSet {
+                    DataVariance STATIC
+                }
+            }
+            num_state_sets 1
+            StateSet {
+                DataVariance STATIC
+                rendering_hint DEFAULT_BIN
+                renderBinMode INHERIT
+                Material {
+                    DataVariance STATIC
+                    ColorMode OFF
+                    ambientColor 1 1 1 1
+                    diffuseColor 1 1 1 1
+                    specularColor 0 0 0 0
+                    emissionColor 0 0 0 0
+                }
+            }
+            num_state_sets 1
+            StateSet {
+                DataVariance STATIC
+                rendering_hint DEFAULT_BIN
+                renderBinMode INHERIT
+            }
+
+            }   
+        }
+    }
+}

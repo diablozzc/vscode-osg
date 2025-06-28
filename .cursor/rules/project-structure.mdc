@@ -1,0 +1,63 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# VSCode OSG 扩展项目结构指南
+
+这是一个为 VS Code 提供 OSG (OpenSceneGraph) 文件格式支持的扩展项目，遵循标准开源项目规范。
+
+## 核心文件
+
+- [package.json](mdc:package.json) - 项目配置，定义了扩展的基本信息、依赖和贡献点
+- [README.md](mdc:README.md) - 项目主页，包含功能介绍、安装和使用说明
+- [LICENSE](mdc:LICENSE) - MIT 开源许可证
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript 编译配置
+
+## 源代码组织
+
+- `src/` - 主要源代码目录
+  - [src/extension.ts](mdc:src/extension.ts) - 扩展入口点，处理激活和停用
+  - `src/providers/` - 语言服务提供者（计划中）
+  - `src/utils/` - 工具函数（计划中）
+  - `src/types/` - TypeScript 类型定义（计划中）
+
+## 扩展资源
+
+- `resources/` - 扩展资源文件目录
+  - [resources/syntaxes/osg.tmLanguage.json](mdc:resources/syntaxes/osg.tmLanguage.json) - OSG 语法高亮定义
+  - [resources/snippets/osg.json](mdc:resources/snippets/osg.json) - 代码片段定义
+  - `resources/icons/` - 图标文件（计划中）
+
+## 语言配置
+
+- [language-configuration.json](mdc:language-configuration.json) - OSG 语言配置，定义注释、括号匹配等
+
+## 文档和示例
+
+- `docs/` - 项目文档目录
+  - [docs/DEVELOPMENT.md](mdc:docs/DEVELOPMENT.md) - 开发指南
+  - [docs/API.md](mdc:docs/API.md) - API 文档
+  - [docs/CHANGELOG.md](mdc:docs/CHANGELOG.md) - 版本更新日志
+- `examples/` - OSG 文件示例
+  - `examples/basic/` - 基础示例文件
+  - `examples/advanced/` - 高级示例（计划中）
+
+## 测试和构建
+
+- `test/` - 测试文件目录
+  - `test/suite/` - 测试套件（计划中）
+  - `test/fixtures/` - 测试数据文件
+- `scripts/` - 构建脚本
+  - [scripts/package.js](mdc:scripts/package.js) - 自定义打包脚本
+- `dist/` - 构建输出目录，包含生成的 VSIX 文件
+- `out/` - TypeScript 编译输出目录
+
+## 开源项目标准文件
+
+- [CONTRIBUTING.md](mdc:CONTRIBUTING.md) - 贡献指南
+- [SECURITY.md](mdc:SECURITY.md) - 安全策略
+- `.github/` - GitHub 配置目录
+  - [.github/workflows/ci.yml](mdc:.github/workflows/ci.yml) - CI/CD 工作流
+  - `.github/ISSUE_TEMPLATE/` - Issue 模板
+  - [.github/PULL_REQUEST_TEMPLATE.md](mdc:.github/PULL_REQUEST_TEMPLATE.md) - PR 模板

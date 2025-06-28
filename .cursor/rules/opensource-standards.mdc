@@ -1,0 +1,81 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 开源项目标准和贡献规范
+
+这个项目遵循现代开源项目的最佳实践和标准。
+
+## 开源许可和法律
+
+- [LICENSE](mdc:LICENSE) - MIT 许可证，允许自由使用、修改和分发
+- [SECURITY.md](mdc:SECURITY.md) - 安全策略和漏洞报告指南
+
+## 贡献指南
+
+[CONTRIBUTING.md](mdc:CONTRIBUTING.md) 包含完整的贡献指南：
+
+### 提交代码流程
+1. Fork 项目
+2. 创建特性分支
+3. 提交更改（遵循 Conventional Commits）
+4. 推送并创建 Pull Request
+
+### 代码规范
+- 使用 TypeScript
+- 遵循 [.eslintrc.json](mdc:.eslintrc.json) 中的 ESLint 规则
+- 使用 [.prettierrc](mdc:.prettierrc) 进行代码格式化
+- 提交前运行 `npm run lint`
+
+### 提交信息格式
+遵循 Conventional Commits：
+- `feat:` - 新功能
+- `fix:` - Bug 修复
+- `docs:` - 文档更新
+- `style:` - 代码格式
+- `refactor:` - 重构
+- `test:` - 测试相关
+
+## GitHub 配置
+
+### Issue 和 PR 模板
+- [.github/ISSUE_TEMPLATE/bug_report.md](mdc:.github/ISSUE_TEMPLATE/bug_report.md) - Bug 报告模板
+- [.github/ISSUE_TEMPLATE/feature_request.md](mdc:.github/ISSUE_TEMPLATE/feature_request.md) - 功能请求模板
+- [.github/PULL_REQUEST_TEMPLATE.md](mdc:.github/PULL_REQUEST_TEMPLATE.md) - PR 模板
+
+### 自动化工作流
+[.github/workflows/ci.yml](mdc:.github/workflows/ci.yml) 定义 CI/CD 流程：
+- 多 Node.js 版本测试 (16.x, 18.x, 20.x)
+- 自动运行 lint、test、build
+- 主分支推送时自动构建 VSIX
+
+## 版本管理
+
+- 遵循 [语义化版本](mdc:https:/semver.org) 规范
+- [docs/CHANGELOG.md](mdc:docs/CHANGELOG.md) 记录所有重要变更
+- 使用 [Keep a Changelog](mdc:https:/keepachangelog.com) 格式
+
+## 项目文档
+
+标准文档结构：
+- [README.md](mdc:README.md) - 项目主页，包含徽章、功能介绍、安装指南
+- [docs/DEVELOPMENT.md](mdc:docs/DEVELOPMENT.md) - 开发环境设置和开发指南
+- [docs/API.md](mdc:docs/API.md) - API 文档和扩展点说明
+- [examples/README.md](mdc:examples/README.md) - 示例文件说明
+- [test/README.md](mdc:test/README.md) - 测试指南和说明
+
+## 代码质量保证
+
+### 静态分析工具
+- ESLint - 代码质量检查
+- Prettier - 代码格式化
+- TypeScript - 类型检查
+
+### 测试策略
+- 单元测试（计划中）
+- 集成测试（计划中）
+- 语法高亮功能测试
+- 扩展激活测试
+
+这些标准确保项目的专业性、可维护性和社区友好性。

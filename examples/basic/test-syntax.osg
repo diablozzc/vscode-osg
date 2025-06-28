@@ -1,0 +1,26 @@
+# 测试 OSG 扩展功能
+Group {
+    UniqueID Group_Test
+    nodeMask 0xffffffff  
+    cullingActive TRUE
+    num_children 1
+    
+    Geode {
+        nodeMask 0xffffffff
+        cullingActive TRUE
+        description "测试节点"
+        num_drawables 1
+        
+        Geometry {
+            DataVariance STATIC
+            useDisplayList TRUE
+            useVertexBufferObjects FALSE
+            
+            VertexArray Vec3Array 3 {
+                0.0 0.0 0.0
+                1.0 0.0 0.0
+                0.5 1.0 0.0
+            }
+        }
+    }
+} 
