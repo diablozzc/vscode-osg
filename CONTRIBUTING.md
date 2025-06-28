@@ -54,7 +54,7 @@
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/osg-team/vscode-osg.git
+   git clone https://github.com/diablozzc/vscode-osg.git
    cd vscode-osg
    ```
 

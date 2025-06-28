@@ -1,8 +1,8 @@
 # VSCode OSG 语言支持扩展
 
-[![CI](https://github.com/osg-team/vscode-osg/workflows/CI/badge.svg)](https://github.com/osg-team/vscode-osg/actions)
+[![CI](https://github.com/diablozzc/vscode-osg/workflows/CI/badge.svg)](https://github.com/diablozzc/vscode-osg/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/osg-team.vscode-osg)](https://marketplace.visualstudio.com/items?itemName=osg-team.vscode-osg)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/diablozzc.vscode-osg)](https://marketplace.visualstudio.com/items?itemName=diablozzc.vscode-osg)
 
 为 Visual Studio Code 提供 OSG (OpenSceneGraph) 文件格式的完整语言支持。
 
@@ -53,11 +53,11 @@
 
 **从源码安装：**
 ```bash
-git clone https://github.com/osg-team/vscode-osg.git
+git clone https://github.com/diablozzc/vscode-osg.git
 cd vscode-osg
 npm install
 npm run package
-code --install-extension dist/vscode-osg-0.1.0.vsix
+code --install-extension dist/vscode-osg-1.0.0.vsix
 ```
 
 ### 使用
@@ -95,7 +95,7 @@ vscode-osg/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/osg-team/vscode-osg.git
+git clone https://github.com/diablozzc/vscode-osg.git
 cd vscode-osg
 
 # 安装依赖
@@ -147,8 +147,8 @@ npm run package-vsce
 
 遇到问题？请通过以下方式反馈：
 
-- [GitHub Issues](https://github.com/osg-team/vscode-osg/issues) - Bug 报告和功能请求
-- [GitHub Discussions](https://github.com/osg-team/vscode-osg/discussions) - 一般讨论和问答
+- [GitHub Issues](https://github.com/diablozzc/vscode-osg/issues) - Bug 报告和功能请求
+- [GitHub Discussions](https://github.com/diablozzc/vscode-osg/discussions) - 一般讨论和问答
 
 提交 Bug 报告时请包含：
 - 操作系统信息
@@ -173,6 +173,6 @@ npm run package-vsce
 
 ---
 
-**开发团队**: OSG Team  
+**开发者**: 张志超 ([@diablozzc](https://github.com/diablozzc))  
 **维护状态**: 积极维护  
-**版本**: 0.1.0 
+**版本**: 1.0.0 

@@ -2,8 +2,20 @@
   "name": "vscode-osg",
   "displayName": "OSG Language Support",
   "description": "OSG (OpenSceneGraph) file format support for VS Code",
-  "version": "0.1.0",
-  "publisher": "osg-team",
+  "version": "1.0.0",
+  "publisher": "diablozzc",
+  "author": {
+    "name": "张志超",
+    "url": "https://github.com/diablozzc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diablozzc/vscode-osg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diablozzc/vscode-osg/issues"
+  },
+  "homepage": "https://github.com/diablozzc/vscode-osg#readme",
   "engines": {
     "vscode": "^1.74.0"
   },
