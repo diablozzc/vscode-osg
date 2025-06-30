@@ -2,7 +2,7 @@
   "name": "vscode-osg",
   "displayName": "OSG Language Support",
   "description": "OSG (OpenSceneGraph) file format support for VS Code",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "publisher": "diablozzc",
   "author": {
     "name": "张志超",
